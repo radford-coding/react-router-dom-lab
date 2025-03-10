@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router';
 import NavBar from './components/NavBar/NavBar';
 import MailboxList from './components/MailboxList/MailboxList';
 import MailboxDetails from './components/MailboxDetails/MailboxDetails';
+import MailboxForm from './components/MailboxForm/MailboxForm';
 
 const dummyData = [
   {
@@ -33,8 +34,9 @@ const App = () => {
       <Routes>
         <Route path='/' element={<h1>Post Office</h1>}></Route>
         <Route path='/mailboxes' element={<MailboxList mailboxes={mailboxes} />}></Route>
-        <Route path='/new-mailbox' element={<h1>New Mailbox</h1>}></Route>
+        <Route path='/new-mailbox' element={<MailboxForm addBox={addBox} />}></Route>
         <Route path='/mailboxes/:mailboxID' element={<MailboxDetails mailboxes={mailboxes}/>}></Route>
+        {/* <Route path="*" element={<h6>Mailbox not found</h6>}></Route> */}
       </Routes>
     </>
   );
