@@ -34,6 +34,16 @@ const NavBar = () => {
                         New Mailbox
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink
+                        to='/new-letter'
+                        style={({ isActive }) => ({
+                            color: isActive ? 'rgba(255, 255, 255, 0.87)' : '#646cff',
+                        })}
+                    >
+                        New Letter
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );
