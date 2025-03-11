@@ -4,8 +4,7 @@ const MailboxDetails = (props) => {
 
     const { mailboxID } = useParams();
     const thisBox = props.mailboxes.find(box => box._id === Number(mailboxID));
-    const theseLetters = props.letters.filter(letter => Number(letter.targetMailbox) === Number(thisBox._id));
-
+    const theseLetters = props.letters.filter(letter => Number(letter.targetMailbox) === Number(mailboxID));
     return (
         <>
             {thisBox !== undefined
