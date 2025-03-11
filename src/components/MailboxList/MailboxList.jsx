@@ -6,7 +6,7 @@ const MailboxList = (props) => {
             <h1>Mailbox List</h1>
             <ul>
                 {props.mailboxes.map((box, index) => (
-                    <li key={index}>
+                    <li key={index} className="mail-box">
                         <NavLink
                             to={`/mailboxes/${box._id}`}
                         >
